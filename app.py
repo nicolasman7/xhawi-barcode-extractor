@@ -3,18 +3,11 @@ import pandas as pd
 import re
 from pathlib import Path
 
-# Page setup
-st.set_page_config(page_title="XHAWI Barcode Extractor", layout="centered")
+st.set_page_config(page_title="Barcode Extractor", layout="centered")
 
-# ✅ Centered logo using columns
-col1, col2, col3 = st.columns([1, 2, 1])
-with col2:
-    st.image("logo.png", width=300)
+# Remove logo and Xhawi title — just display clean header
+st.markdown("<h1 style='text-align: center; font-size: 32px;'>Barcode Extractor</h1>", unsafe_allow_html=True)
 
-# Title
-st.markdown("<h1 style='text-align: center; font-size: 36px;'>Barcode Extractor</h1>", unsafe_allow_html=True)
-
-# Subheading
 st.subheader("Upload a CSV or Excel file")
 
 # Extract barcode from filename
